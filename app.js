@@ -29,19 +29,19 @@ function Stopwatch() {
 
     this.stop = function()
     {
-        
-     
+        clearTimeout(this.timeOutRef)
     };
 
     this.continue = function()
     {
-
+        this.startStopwatch()
     };
 }
 
 window.onload = function() {
     var startBtn = document.getElementById("startBtn");
     var stopBtn = document.getElementById("stopBtn");
+    var continueBtn = document.getElementById("continueBtn")
 
     var stopwatchHandle = document.getElementById("stopWatchHandle");
 
@@ -51,5 +51,13 @@ window.onload = function() {
 
         var firstValue = document.getElementById("firstValue").value;
         stopwatch.start(firstValue);
+    }
+
+    stopBtn.onclick = function() {
+        stopwatch.stop()
+    }
+
+    continueBtn.onclick = function() {
+        stopwatch.continue()
     }
 }
