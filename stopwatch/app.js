@@ -36,12 +36,20 @@ function Stopwatch() {
     {
         this.startStopwatch()
     };
+
+    this.freezeFrame = function() {
+        var listItem = '<li>' + this.firstValue + '</li>';
+        this.stopwatchHandle.innerHTML += listItem;
+        
+    };
+
 }
 
 window.onload = function() {
     var startBtn = document.getElementById("startBtn");
     var stopBtn = document.getElementById("stopBtn");
-    var continueBtn = document.getElementById("continueBtn")
+    var continueBtn = document.getElementById("continueBtn");
+    var freezeBtn = document.getElementById("freezeBtn");
 
     var stopwatchHandle = document.getElementById("stopWatchHandle");
 
@@ -59,5 +67,9 @@ window.onload = function() {
 
     continueBtn.onclick = function() {
         stopwatch.continue()
+    }
+
+    freezeBtn.onclick = function() {
+        stopwatch.freezeFrame()
     }
 }
