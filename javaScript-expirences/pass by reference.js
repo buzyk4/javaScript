@@ -6,7 +6,7 @@ let employee = {
 }
 
 function promoteToManager(user) {
-    if( user.rank === "manager") {
+    if( user.rank == "manager") {
         return console.log("user is a manager already");
     }
     else {
