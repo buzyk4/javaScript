@@ -16,3 +16,4 @@ function promoteToManager(user) {
 }
 
 promoteToManager(employee)
+console.log(employee)
