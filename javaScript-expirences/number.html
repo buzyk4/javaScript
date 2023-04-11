@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let x = prompt("Podaj liczbę całkowitą: ");
+        console.log(typeof(x));
+        x = Number.parseInt(x);
+        console.log(typeof(x));
+
+        function calculateSquareArea(wall) {
+            return wall * wall
+        };
+
+        let squareArea = calculateSquareArea(x);
+        console.log(squareArea);
+
+        let decimalNum = prompt("Pdaj liczbę dziesietną (z kropką): ");
+        decimalNum = Number.parseFloat(decimalNum);
+        console.log(typeof(decimalNum));
+        squareArea = calculateSquareArea(decimalNum);
+
+        console.log(squareArea);
+        console.log(squareArea.toFixed(2))
+    </script>
+</body>
+</html>
